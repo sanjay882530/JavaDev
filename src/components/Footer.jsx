@@ -9,7 +9,8 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-2">About Us</h3>
             <p className="text-sm">
-              We are committed to providing high-quality courses to help you join software development Indurtry.
+              We are committed to providing high-quality courses to help you
+              join software development Indurtry.
             </p>
           </div>
           {/* Section 2: Links */}
@@ -42,8 +43,10 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-2">Contact</h3>
             <p className="text-sm">Email: sanjayprasad7293@gmail.com</p>
-            <p className="text-sm">Phone: +917033442168</p>
-            <p className="text-sm">Address: 12B Main Street, Madurdaha, Kolkata 700100</p>
+            <p className="text-sm">Phone: +918825302750</p>
+            <p className="text-sm">
+              Address: 12B Main Street, Madurdaha, Kolkata 700100
+            </p>
           </div>
         </div>
         <hr className="my-4 border-gray-600" />

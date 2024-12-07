@@ -6,15 +6,14 @@ import {
   Bars3Icon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [courseToggleMenu, setCourseToggleMenu] = useState(false);
 
   return (
     <div className="app">
-    <nav className="bg-slate-200 shadow-md fixed top-0 left-0 w-full">
-
+      <nav className="bg-slate-200 shadow-md fixed top-0 left-0 w-full">
         <div className="max-w-7xl mx-auto">
           <div className="flex mx-auto justify-between items-center w-5/6 py-4">
             {/* Primary menu and logo */}
@@ -74,9 +73,10 @@ const Navbar = () => {
                 <a href="/learn-more" className="hover:text-primary">
                   Learn More
                 </a>
-                <a href="/interview-questions" className="hover:text-primary">
+                <Link to="/interview-questions" className="hover:text-primary">
                   Interview Questions
-                </a>
+                </Link>
+
                 <a href="/contact-us" className="hover:text-primary">
                   Contact Us
                 </a>
@@ -92,10 +92,9 @@ const Navbar = () => {
               </div>
               {/* Free Trial */}
               <button className="rounded-full border-2 border-gray-300 py-2 px-4 hover:bg-gray-700 hover:text-white">
-              <a href="/login" className="hover:text-primary">
-              Signin
+                <a href="/login" className="hover:text-primary">
+                  Signin
                 </a>
-                
               </button>
               {/* Mobile navigation toggle */}
               <button
@@ -103,7 +102,11 @@ const Navbar = () => {
                 className="lg:hidden"
                 aria-label="Toggle mobile navigation"
               >
-                {toggleMenu ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
+                {toggleMenu ? (
+                  <XMarkIcon className="h-6 w-6" />
+                ) : (
+                  <Bars3Icon className="h-6 w-6" />
+                )}
               </button>
             </div>
           </div>
@@ -152,7 +155,10 @@ const Navbar = () => {
                   </a>
                 </div>
               )}
-              <a href="/learn-more" className="text-gray-700 hover:text-primary">
+              <a
+                href="/learn-more"
+                className="text-gray-700 hover:text-primary"
+              >
                 Learn More
               </a>
               <a
@@ -161,7 +167,10 @@ const Navbar = () => {
               >
                 Interview Questions
               </a>
-              <a href="/contact-us" className="text-gray-700 hover:text-primary">
+              <a
+                href="/contact-us"
+                className="text-gray-700 hover:text-primary"
+              >
                 Contact Us
               </a>
             </div>
