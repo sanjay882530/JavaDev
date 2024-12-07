@@ -19,20 +19,20 @@ const Navbar = () => {
             {/* Primary menu and logo */}
             <div className="flex items-center gap-8">
               {/* Logo */}
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="flex gap-1 font-bold text-gray-700 items-center"
                 aria-label="JavaDev Homepage"
               >
                 <PaperAirplaneIcon className="h-6 w-6 text-primary" />
                 <span>JavaDev</span>
-              </a>
+              </Link>
 
               {/* Desktop navigation */}
               <div className="hidden lg:flex gap-6">
-                <a href="/home" className="hover:text-primary">
+                <Link to="/home" className="hover:text-primary">
                   Home
-                </a>
+                </Link>
                 <div className="relative">
                   <button
                     onClick={() => setCourseToggleMenu(!courseToggleMenu)}
@@ -43,43 +43,43 @@ const Navbar = () => {
                   {/* Dropdown */}
                   {courseToggleMenu && (
                     <div className="absolute bg-white shadow-md rounded-md mt-2 py-2">
-                      <a
-                        href="/java"
+                      <Link
+                        to="/java"
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                       >
                         Java
-                      </a>
-                      <a
-                        href="/spring-boot"
+                      </Link>
+                      <Link
+                        to="/spring-boot"
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                       >
                         Spring Boot
-                      </a>
-                      <a
-                        href="/microservices"
+                      </Link>
+                      <Link
+                        to="/microservices"
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                       >
                         Microservices
-                      </a>
-                      <a
-                        href="/database"
+                      </Link>
+                      <Link
+                        to="/database"
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                       >
                         Database
-                      </a>
+                      </Link>
                     </div>
                   )}
                 </div>
-                <a href="/learn-more" className="hover:text-primary">
+                <Link to="/learn-more" className="hover:text-primary">
                   Learn More
-                </a>
+                </Link>
                 <Link to="/interview-questions" className="hover:text-primary">
                   Interview Questions
                 </Link>
 
-                <a href="/contact-us" className="hover:text-primary">
+                <Link to="/contact-us" className="hover:text-primary">
                   Contact Us
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -92,9 +92,9 @@ const Navbar = () => {
               </div>
               {/* Free Trial */}
               <button className="rounded-full border-2 border-gray-300 py-2 px-4 hover:bg-gray-700 hover:text-white">
-                <a href="/login" className="hover:text-primary">
+                <Link to="/login" className="hover:text-primary">
                   Signin
-                </a>
+                </Link>
               </button>
               {/* Mobile navigation toggle */}
               <button
