@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "homepage": ".",
     "build": "vite build",
     "lint": "eslint .",
     "start": "cross-env PORT=3001 react-scripts start",
