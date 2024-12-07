@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 import SpringBootForMicroservices from './SpringBootForMicroservices';
 
 function SpringBoot() {
@@ -62,7 +63,13 @@ function SpringBoot() {
                   <li>No need to remember the name and version of the dependencies.</li>
                       </ul>
                   
-          <SpringBootForMicroservices/>
+          <SpringBootForMicroservices />
+          <br />
+          <h1 className='font-bold text-3xl font-serif'>Spring Boot Points to covers</h1>
+          <ul className='list-decimal font-sans text-2xl from-neutral-700 mx-20'>
+                   <li><Link  to="/Spring-Annotations" className='underline md:underline-offset-2 font-bold text-slate-400'> Spring Boot – Annotations </Link></li>
+                  <li><Link  to="/Dependency-Injection" className='underline md:underline-offset-2 font-bold text-slate-400'>Dependency Injection </Link></li>
+                  </ul>
     </div>
   )
 }
