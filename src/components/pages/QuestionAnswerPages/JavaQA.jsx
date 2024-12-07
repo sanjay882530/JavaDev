@@ -27,6 +27,24 @@ Java Utilizes this memory as - <br/>
 -> When we write a java program then all the variables, methods, etc are stored in the stack memory. <br/>
 -> And when we create any object in the java program then that object was created in the heap memory. And it was referenced from the stack memory.`,
     },
+    {
+      id: 4,
+      question: "How is an infinite loop declared in Java?",
+      answer: `Infinite loops are those loops that run infinitely without any breaking conditions. Some examples of consciously declaring infinite loop is:<br/>
+Using For Loop:
+<br/>
+for (;;)
+{
+   // Business logic
+   // Any break logic
+}
+<br/>
+Using while loop:<br/>
+while(true){
+   // Business logic
+   // Any break logic
+}`,
+    },
   ];
 
   // State to track selected question
