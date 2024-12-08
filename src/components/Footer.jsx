@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -19,24 +18,24 @@ const Footer = () => {
             <h3 className="font-bold text-lg mb-2">Quick Links</h3>
             <ul>
               <li>
-                <Link to="/" className="text-sm hover:underline">
+                <a href="#" className="text-sm hover:underline">
                   Home
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="#" className="text-sm hover:underline">
+                <a href="#" className="text-sm hover:underline">
                   Services
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="#" className="text-sm hover:underline">
+                <a href="#" className="text-sm hover:underline">
                   Contact
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="#" className="text-sm hover:underline">
+                <a href="#" className="text-sm hover:underline">
                   Blog
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -44,7 +43,7 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-2">Contact</h3>
             <p className="text-sm">Email: sanjayprasad7293@gmail.com</p>
-            <p className="text-sm">Phone: +918825302750</p>
+            <p className="text-sm">Phone: +917033442168</p>
             <p className="text-sm">
               Address: 12B Main Street, Madurdaha, Kolkata 700100
             </p>
