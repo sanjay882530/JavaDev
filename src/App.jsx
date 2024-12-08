@@ -13,6 +13,7 @@ import SpringBootAnnotations from "./components/pages/SpringBootAnnotations";
 import InterviewQuestionNav from "./components/InterviewQuestionNav";
 import JavaQA from "./components/pages/QuestionAnswerPages/JavaQA";
 import ReactQA from "./components/pages/QuestionAnswerPages/ReactQA";
+import ContactUs from "./components/ContactUs";
 function App() {
   return (
     <>
@@ -30,6 +31,7 @@ function App() {
             <Route path="/spring-ICO-container" element={<SpringIOC />} />
             <Route path="/core-javaQA" element={<JavaQA />} />
             <Route path="/reactQA" element={<ReactQA />} />
+            <Route path="/contact-us" element={<ContactUs />} />
 
             <Route
               path="/microservices"
