@@ -1,33 +1,40 @@
 import React from "react";
+import { Link } from "react-router-dom";
 const InterviewQuestionNav = () => {
   return (
     <nav className="bg-slate-400 mt-20 ">
       <div className="container mx-auto flex  items-center">
         <ul className="flex space-x-20 ">
           <li>
-            <a href="/core-javaQA" className="text-black hover:text-gray-500">
+            <Link to="/core-javaQA" className="text-black hover:text-gray-500">
               Core Java
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#spring-bootQA" className="text-black hover:text-gray-500">
+            <Link
+              to="#spring-bootQA"
+              className="text-black hover:text-gray-500"
+            >
               Spring Boot
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/reactQA" className="text-black hover:text-gray-500">
+            <Link to="/reactQA" className="text-black hover:text-gray-500">
               React
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#microservices" className="text-black hover:text-gray-500">
+            <Link
+              to="#microservices"
+              className="text-black hover:text-gray-500"
+            >
               Microservices
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#tools" className="text-black hover:text-gray-500">
+            <Link to="#tools" className="text-black hover:text-gray-500">
               Tools
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
