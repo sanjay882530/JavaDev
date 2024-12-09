@@ -1,4 +1,3 @@
-
 import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
@@ -53,6 +52,58 @@ public class HelloWorld {
           </tr>
         </tbody>
       </table>
+      <h1 className="text-2xl font-bold m-2">
+        {" "}
+        OOPs Concepts in Java With Examples
+      </h1>
+      <p>
+        {" "}
+        Object means a real-world entity such as a mobile, book, table,
+        computer, watch, etc. Object-Oriented Programming is a methodology or
+        paradigm to design a program using classes and objects. It simplifies
+        software development and maintenance by providing some concepts.
+      </p>
+      <h1 className="text-2xl font-bold m-2">
+        Java OOPs (Object-Oriented Programming) Concepts
+      </h1>
+      <ul className="list-disc px-11">
+        <li>Object</li>
+        <li>Class</li>
+        <li>Inheritance</li>
+        <li>Polymorphism</li>
+        <li>Abstraction</li>
+        <li>Encapsulation</li>
+      </ul>
+      <img src="oops.jpg" className="container" />
+
+      <h1 className="text-2xl font-bold m-2">1. Object</h1>
+      <p>
+        {" "}
+        Object is a real world entity or it is an instances of class that holds
+        state, behavior and identity of that class.
+        <br /> Every class has object as a superclass
+      </p>
+      <p>
+        For example: A car is an object that has states such as color, model,
+        price and behaviour such as speed, start, gear change, stop etc.
+      </p>
+
+      <h1 className="text-2xl font-bold m-2">2. Class</h1>
+      <p>
+        {" "}
+        Class : It is a template or blueprint of an object that describe the
+        behavior and state of an object type.
+      </p>
+      <p>
+        In Java, everything is related to classes and objects. Each class has
+        its methods and attributes that can be accessed and manipulated through
+        the objects.
+      </p>
+      <p>
+        For example, if you want to create a class for students. In that case,
+        "Student" will be a class, and student records (like student1, student2,
+        etc) will be objects.
+      </p>
     </div>
   );
 };

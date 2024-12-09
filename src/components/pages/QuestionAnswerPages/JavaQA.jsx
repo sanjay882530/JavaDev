@@ -31,19 +31,28 @@ Java Utilizes this memory as - <br/>
       id: 4,
       question: "How is an infinite loop declared in Java?",
       answer: `Infinite loops are those loops that run infinitely without any breaking conditions. Some examples of consciously declaring infinite loop is:<br/>
-Using For Loop:
+   <b> Using For Loop:</b>
+    <br/>
+        for (;;)
+      {
+        // Business logic
+        // Any break logic
+      }
 <br/>
-for (;;)
-{
-   // Business logic
-   // Any break logic
-}
+<b>Using while loop:</b>
 <br/>
-Using while loop:<br/>
 while(true){
    // Business logic
    // Any break logic
 }`,
+    },
+    {
+      id: 5,
+      question: "Briefly explain the concept of constructor overloading?",
+      answer: `Constructor overloading is the process of creating multiple 
+      constructors in the class consisting of the same name with a difference in the constructor parameters.
+       Depending upon the number of parameters and their corresponding types, distinguishing of the different 
+       types of constructors is done by the compiler.`,
     },
   ];
 
@@ -68,7 +77,7 @@ while(true){
                 }`}
                 onClick={() => setSelectedQuestion(q)}
               >
-                {q.question}
+                {q.id}. {q.question}
               </li>
             ))}
           </ul>

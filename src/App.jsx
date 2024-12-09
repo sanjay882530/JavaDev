@@ -14,6 +14,7 @@ import InterviewQuestionNav from "./components/InterviewQuestionNav";
 import JavaQA from "./components/pages/QuestionAnswerPages/JavaQA";
 import ReactQA from "./components/pages/QuestionAnswerPages/ReactQA";
 import ContactUs from "./components/ContactUs";
+import Microservices from "./components/pages/Microservices";
 function App() {
   return (
     <>
@@ -33,10 +34,7 @@ function App() {
             <Route path="/reactQA" element={<ReactQA />} />
             <Route path="/contact-us" element={<ContactUs />} />
 
-            <Route
-              path="/microservices"
-              element={<SpringBootForMicroservices />}
-            />
+            <Route path="/microservices" element={<Microservices />} />
             <Route
               path="/Dependency-Injection"
               element={<DependencyInjection />}
