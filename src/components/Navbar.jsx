@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect} from "react";
 import {
   PaperAirplaneIcon,
   MoonIcon,
@@ -10,6 +10,21 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [courseToggleMenu, setCourseToggleMenu] = useState(false);
+  const menuRef = useRef(null); // Reference for the menu
+
+  // Handle clicks outside the menu
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setCourseToggleMenu(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <div className="app">
@@ -33,43 +48,43 @@ const Navbar = () => {
                 <Link to="/home" className="hover:text-primary">
                   Home
                 </Link>
-                <div className="relative">
-                  <button
-                    onClick={() => setCourseToggleMenu(!courseToggleMenu)}
-                    className="hover:text-primary"
-                  >
-                    Courses
-                  </button>
-                  {/* Dropdown */}
-                  {courseToggleMenu && (
-                    <div className="absolute bg-white shadow-md rounded-md mt-2 py-2">
-                      <Link
-                        to="/java"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      >
-                        Java
-                      </Link>
-                      <Link
-                        to="/spring-boot"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      >
-                        Spring Boot
-                      </Link>
-                      <Link
-                        to="/microservices"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      >
-                        Microservices
-                      </Link>
-                      <Link
-                        to="/database"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      >
-                        Database
-                      </Link>
-                    </div>
-                  )}
-                </div>
+                <div className="relative" ref={menuRef}>
+      <button
+        onClick={() => setCourseToggleMenu(!courseToggleMenu)}
+        className="hover:text-primary"
+      >
+        Courses
+      </button>
+      {/* Dropdown */}
+      {courseToggleMenu && (
+        <div className="absolute bg-white shadow-md rounded-md mt-2 py-2">
+          <Link
+            to="/java"
+            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+          >
+            Java
+          </Link>
+          <Link
+            to="/spring-boot"
+            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+          >
+            Spring Boot
+          </Link>
+          <Link
+            to="/microservices"
+            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+          >
+            Microservices
+          </Link>
+          <Link
+            to="/database"
+            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+          >
+            Database
+          </Link>
+        </div>
+      )}
+    </div>
                 <Link to="/learn-more" className="hover:text-primary">
                   Learn More
                 </Link>
