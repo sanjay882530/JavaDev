@@ -9,6 +9,35 @@ public class HelloWorld {
     }
 }
   `;
+  const objcetAndClass = `class Car {
+    String brand;
+    String model;
+    int year;
+
+    // Constructor
+    public Car(String brand, String model, int year) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+    }
+
+    // Method
+    public void startEngine() {
+        System.out.println(brand + " " + model + "'s engine started.");
+    }
+}
+`;
+  const javamailclass = `public class Main {
+    public static void main(String[] args) {
+        Car car1 = new Car("Toyota", "Innova", 2023);
+        Car car2 = new Car("Honda", "City", 2022);
+
+        car1.startEngine(); // Output: Toyota Innova's engine started.
+        car2.startEngine(); // Output: Honda City's engine started.
+    }
+}
+`;
+
 
   return (
     <div className="m-20 mt-40">
@@ -101,10 +130,60 @@ public class HelloWorld {
       </p>
       <p>
         For example, if you want to create a class for students. In that case,
-        "Student" will be a class, and student records (like student1, student2,
+        Student will be a class, and student records (like student1, student2,
         etc) will be objects.
       </p>
+      <h1 className="text-2xl font-bold m-2">Below is the Simple program of Classes and Objects:</h1>
+      
+
+<table className="w-full border-collapse border border-gray-300 mt-6">
+        <thead>
+          <tr>
+            <th className="border border-gray-300 bg-gray-200 p-4 text-left">
+            Class: Blueprint for a car.
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="border border-gray-300 p-4">
+              <div>
+                <SyntaxHighlighter language="java" style={dracula}>
+                  {objcetAndClass}
+                </SyntaxHighlighter>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <table className="w-full border-collapse border border-gray-300 mt-6">
+        <thead>
+          <tr>
+            <th className="border border-gray-300 bg-gray-200 p-4 text-left">
+            Object: Specific instances of the Car class.
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="border border-gray-300 p-4">
+              <div>
+                <SyntaxHighlighter language="java" style={dracula}>
+                  {javamailclass}
+                </SyntaxHighlighter>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p className="font-semibold text-xl"> Output</p>
+      <div className="bg-slate-800 text-blue-100 p-6"> Toyota Innova's engine started.
+        <br/>Honda City's engine started.
+      </div>
+
     </div>
+
   );
 };
 
