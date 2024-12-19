@@ -7,7 +7,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import JavaDoc from "./components/JavaDoc";
 import SpringBoot from "./components/pages/SpringBoot";
 import SpringIOC from "./components/pages/SpringIOC";
-import SpringBootForMicroservices from "./components/pages/SpringBootForMicroservices";
 import DependencyInjection from "./components/pages/DependencyInjection";
 import SpringBootAnnotations from "./components/pages/SpringBootAnnotations";
 import InterviewQuestionNav from "./components/InterviewQuestionNav";
@@ -15,6 +14,7 @@ import JavaQA from "./components/pages/QuestionAnswerPages/JavaQA";
 import ReactQA from "./components/pages/QuestionAnswerPages/ReactQA";
 import ContactUs from "./components/ContactUs";
 import Microservices from "./components/pages/Microservices";
+import JavaCompiler from "./components/pages/JavaCompiler";
 function App() {
   return (
     <>
@@ -47,6 +47,10 @@ function App() {
             <Route
               path="/interview-questions"
               element={<InterviewQuestionNav />}
+            />
+            <Route
+              path="/learn-more"
+              element={<JavaCompiler />}
             />
           </Routes>
         </>
