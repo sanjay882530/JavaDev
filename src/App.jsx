@@ -15,6 +15,7 @@ import ReactQA from "./components/pages/QuestionAnswerPages/ReactQA";
 import ContactUs from "./components/ContactUs";
 import Microservices from "./components/pages/Microservices";
 import JavaCompiler from "./components/pages/JavaCompiler";
+import DatabaseDoc from "./components/pages/database/DatabaseDoc";
 function App() {
   return (
     <>
@@ -33,6 +34,7 @@ function App() {
             <Route path="/core-javaQA" element={<JavaQA />} />
             <Route path="/reactQA" element={<ReactQA />} />
             <Route path="/contact-us" element={<ContactUs />} />
+            <Route path="/database" element={<DatabaseDoc />} />
 
             <Route path="/microservices" element={<Microservices />} />
             <Route
