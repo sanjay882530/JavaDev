@@ -1,4 +1,4 @@
-# React + Vite (This is full websit of JavaDev)
+# React + Vite (This is full website of JavaDev)
 
 On this project mainly you learn java solutions
 Currently, two official plugins are available:
